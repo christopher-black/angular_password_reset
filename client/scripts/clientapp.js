@@ -14,6 +14,14 @@ myApp.config(['$routeProvider', '$locationProvider',
       templateUrl: '/views/templates/register.html',
       controller: 'LoginController'
     })
+    .when('/forgotpassword', {
+      templateUrl: '/views/templates/forgot.html',
+      controller: 'LoginController'
+    })
+    .when('/confirmreset/:code', {
+      templateUrl: '/views/templates/confirm.html',
+      controller: 'LoginController'
+    })
     .when('/user', {
       templateUrl: '/views/templates/user.html',
       controller: 'UserController',

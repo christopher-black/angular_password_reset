@@ -7,7 +7,9 @@ var SALT_WORK_FACTOR = 10;
 var UserSchema = new Schema({
     username: {type: String, required: true, index: {unique: true}},
     password: {type: String, required: true},
-    recipes: {type: Array}
+    code: {type: String},
+    // A point in the future when code expires
+    expiration: {type: Date, default: Date.now}
 });
 
 // Called before adding a new user to the DB. Encrypts password.
